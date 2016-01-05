@@ -12,6 +12,7 @@
 #import "SLIPSearchController.h"
 #import "SLBankCardController.h"
 #import "SLTripListController.h"
+#import "SLWeixinController.h"
 
 @interface SLSearchMoreController ()
 
@@ -69,6 +70,12 @@
         SLTripListController *trip = [[SLTripListController alloc] init];
         trip.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:trip animated:YES];
+        
+    }else if (indexPath.section == 5) {
+        
+        SLWeixinController *weixin = [[SLWeixinController alloc] init];
+        weixin.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:weixin animated:YES];
         
     }
 }

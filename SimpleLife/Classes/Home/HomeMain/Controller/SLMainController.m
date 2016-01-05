@@ -8,9 +8,13 @@
 
 #import "SLMainController.h"
 #import "SLNewsController.h"
-#import "SLJokesController.h"
-#import "SLWeixinController.h"
 #import "SLHotNewsController.h"
+#import "SLDomesticNewsController.h"
+#import "SLInterNationalNewsController.h"
+#import "SLMilitaryNewsController.h"
+#import "SLFinantialNewsController.h"
+#import "SLTechnologicalNewsController.h"
+
 #import "SLTopBar.h"
 #import "SLScrollView.h"
 
@@ -122,20 +126,32 @@
     //创建新浪新闻控制器
     SLNewsController *news         = [[SLNewsController alloc] init];
     news.title                     = @"新闻门户";
-
-    //创建趣图控制器
-    SLJokesController *jokes       = [[SLJokesController alloc] init];
-    jokes.title                    = @"趣图看看";
-
+    
     //创建精选新闻控制器
     SLHotNewsController *hotNews = [[SLHotNewsController alloc] init];
-    hotNews.title                 = @"热门新闻";
+    hotNews.title                 = @"热门";
+    
+    //创建国内控制器
+    SLDomesticNewsController *domesticNews = [[SLDomesticNewsController alloc] init];
+    domesticNews.title = @"国内";
+    
+    //创建国际焦点控制器
+    SLInterNationalNewsController *interNationalNews = [[SLInterNationalNewsController alloc] init];
+    interNationalNews.title = @"国际";
+    
+    //创建军事控制器
+    SLMilitaryNewsController *militaryNews = [[SLMilitaryNewsController alloc] init];
+    militaryNews.title = @"军事";
+    
+    //创建财经控制器
+    SLFinantialNewsController *finantialNews = [[SLFinantialNewsController alloc] init];
+    finantialNews.title = @"财经";
+    
+    //创建科技控制器
+    SLTechnologicalNewsController *technologicalNews = [[SLTechnologicalNewsController alloc] init];
+    technologicalNews.title = @"科技";
 
-    //创建微信精选控制器
-    SLWeixinController *weixin     = [[SLWeixinController alloc] init];
-    weixin.title                   = @"微信精选";
-
-    self.scrollViewController      = @[news,hotNews,jokes,weixin];
+    self.scrollViewController      = @[news,hotNews,domesticNews,interNationalNews,militaryNews,finantialNews,technologicalNews];
 }
 
 #pragma mark - TopBar代理方法
